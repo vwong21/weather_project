@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#card {
+    height: 100vh;
+    background: url(../images/rain.jpg);    
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.75;
+}
+
+#search {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+#search-button {
+    background-color: transparent;
+    width: 20px;
+}
