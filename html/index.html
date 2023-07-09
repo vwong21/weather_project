@@ -6,19 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather</title>
     <link rel="stylesheet" href="../css/style.css">
-    <script src="dist/index.js" defer></script>
+    <script src="../dist/index.js" defer></script>
 </head>
 
 <body>
     <div id="card">
-        <nav id="search">
-            <input type="text" placeholder="Enter city name" spellcheck="false" id="location">
-            <button><img src="../images/search_button.png" id="search-button"></button>
-        </nav>
         <header>
-            <p>Vancouver</p>
-            <h1>25°C</h1>
-            <p>Clear</p>
+            <nav id="search">
+                <input type="text" placeholder="Enter city name" spellcheck="false" id="location">
+                <button id="search-button"><img src="../images/search_button.png"></button>
+            </nav>
+            <main>
+                <p id="city-name">Vancouver</p>
+                <h1 id="temp">25°<sup id="celcius">C</sup>
+                </h1>
+                <p id="condition">Clear</p>
+            </main>
         </header>
     </div>
 </body>

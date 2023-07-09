@@ -1,22 +1,84 @@
+@font-face {
+    font-family: roboto;
+    src: url(../fonts/Roboto-Thin.ttf);
+}
+
 * {
     margin: 0;
     box-sizing: border-box;
+    font-family: roboto; 
+    color: white;
+}
+
+body {
+    font-size: 100%;
 }
 
 #card {
     height: 100vh;
-    background: url(../images/rain.jpg);    
+    background: url(../images/sunny.jpg);    
     background-size: cover;
     background-repeat: no-repeat;
-    opacity: 0.75;
+}
+
+header {
+    height: 35%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 #search {
+    width: 100%;
     display: flex;
     flex-flow: row nowrap;
+    justify-content: center;
+}
+
+#location {
+    width: 50%;
+    border: none;
+    background-color: #000000;
+    opacity: 0.25;
+    border-radius: 20px 0 0 20px;
+    text-align: center;
+    color: white;
+}
+
+::placeholder {
+    color: white;
 }
 
 #search-button {
-    background-color: transparent;
+    border: none;
+    background-color: #000000;
+    opacity: 0.25;
+    border-radius: 0 20px 20px 0;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+#search-button img {
     width: 20px;
+}
+
+#city-name {
+    font-size: 5vw;
+    text-align: center;
+}
+
+#temp {
+    font-size: 20vw;
+    text-align: center;
+}
+
+#celcius {
+    font-size: 5vw;
+}
+
+#condition {
+    font-size: 5vw;
+    text-align: center;
 }
