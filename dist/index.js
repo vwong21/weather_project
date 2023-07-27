@@ -25,15 +25,23 @@ const checkWeather = (location) => __awaiter(void 0, void 0, void 0, function* (
     catch (err) {
         console.error(err);
     }
+    ;
 });
 const changeInfo = (data) => {
-    cityName.innerHTML = data.location.name;
-    temp.innerHTML = `${data.current.temp_c}°<sup id="celcius">C</sup>`;
+    const dateTime = data.location.localtime;
+    const time = dateTime.substr(dateTime.length - 5);
+    cityName.innerHTML = `<p id="city-name">${data.location.name}</p>`;
+    temp.innerHTML = `${data.current.temp_c}`;
     condition.innerHTML = data.current.condition.text;
+};
+const noInfo = () => {
+    cityName.innerHTML = ``;
+    temp.innerHTML = `- -`;
+    condition.innerHTML = ``;
 };
 searchButton === null || searchButton === void 0 ? void 0 : searchButton.addEventListener('click', () => {
     checkWeather(locationInput.value)
-        .then((res) => {
-        changeInfo(res);
-    });
+        .then((res) => changeInfo(res))
+        .then((res) => console.log(res))
+        .catch(() => noInfo());
 });

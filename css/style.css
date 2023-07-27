@@ -1,9 +1,11 @@
 @font-face {
+    /* Set default font */
     font-family: roboto;
     src: url(../fonts/Roboto-Thin.ttf);
 }
 
 * {
+    /* Set default settings for all elements */
     margin: 0;
     box-sizing: border-box;
     font-family: roboto; 
@@ -11,10 +13,12 @@
 }
 
 body {
+    /* Set default font size to 100% */
     font-size: 100%;
 }
 
 #card {
+    /* Create card with background image */
     height: 100vh;
     background: url(../images/sunny.jpg);    
     background-size: cover;
@@ -22,6 +26,7 @@ body {
 }
 
 header {
+    /* Top half of card set to flex */
     height: 35%;
     display: flex;
     flex-flow: column nowrap;
@@ -30,6 +35,7 @@ header {
 }
 
 #search {
+    /* Navigation set width and set to flex */
     width: 100%;
     display: flex;
     flex-flow: row nowrap;
@@ -37,6 +43,7 @@ header {
 }
 
 #location {
+    /* Search bar set to translucent background */
     width: 50%;
     border: none;
     background-color: #000000;
@@ -47,10 +54,12 @@ header {
 }
 
 ::placeholder {
+    /* Placeholder text set to white */
     color: white;
 }
 
 #search-button {
+    /* Search button style */
     border: none;
     background-color: #000000;
     opacity: 0.25;
@@ -61,24 +70,29 @@ header {
 }
 
 #search-button img {
+    /* Set size of search button */
     width: 20px;
 }
 
 #city-name {
+    /* Set size and center city name */
     font-size: 5vw;
     text-align: center;
 }
 
 #temp {
+    /* Set size and center temperature reading */
     font-size: 20vw;
     text-align: center;
 }
 
-#celcius {
-    font-size: 5vw;
-}
-
 #condition {
+    /* Set size and center condition */
     font-size: 5vw;
     text-align: center;
+}
+
+section {
+    /* Bottom section height set to rest of page */
+    height: 65%;
 }
