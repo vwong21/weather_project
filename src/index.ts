@@ -20,12 +20,19 @@ const checkWeather = async (location: string) => {
 };
 
 const changeInfo = (data: any) => {
+    const background = {
+        'time': ['midnight', 'morning', 'noon', 'evening'],
+        'weather': ['sunny', 'rain', 'snow', 'lightning']
+    }
+
     const dateTime = data.location.localtime;
     const time = dateTime.substr(dateTime.length - 5);
 
     cityName.innerHTML = `<p id="city-name">${data.location.name}</p>`;
     temp.innerHTML = `${data.current.temp_c}`;
     condition.innerHTML = data.current.condition.text;
+
+
     
     
 };
